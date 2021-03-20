@@ -50,7 +50,7 @@ la zone d'index ou zone de préparation (`staging area, stage`) stocke les info 
 |master | branche de développement par défaut |
 |origin | dépôt amont par défaut |
 |HEAD | branche courante, version committé en cours |
-|HEAD\textasciicircum | le commit précédent HEAD (équivalent à HEAD\textasciitilde) |
+|HEAD^ | le commit précédent HEAD (équivalent à HEAD~) |
 
 **Configuration**  
 | item à configurer | commande |
@@ -66,42 +66,48 @@ la zone d'index ou zone de préparation (`staging area, stage`) stocke les info 
 |voir les réglages | `git config --list` |
 |aide sur la config | `git help config` |
 
-**Commandes de base**  
-initialiser un dépôt git \dotfill `git init`  
-afficher le statut d'un répertoire suivi \dotfill `git status`  
-ajouter un fichier au suivi \dotfill `git add <fichier>`  
-effacer un fichier (yc dans espace de travail) \dotfill `git rm <fichier>`  
-déclarer une modif sur un fichier \dotfill `git commit -m "message"`  
-rapatrier une branche \dotfill `git checkout`  
-créer une nouvelle branche \dotfill `git -b <branche>`  
-cloner un projet GH \dotfill `git clone <url>`  
-créer une copie de MASTER \dotfill `git branch <branche>`  
-basculer vers BRANCHE \dotfill `git checkout <branche>`  
-basculer une branche vers MASTER \dotfill `git checkout master`  
-afficher les branches d'un dépôt \dotfill `git branch -a`  
 
-\vfill
-\columnbreak
+**Commandes de base**  
+| action				|			commande		|
+|---------------|-----------------|
+|initialiser un dépôt git | `git init` |
+|afficher le statut d'un répertoire suivi | `git status` |
+|ajouter un fichier au suivi | `git add <fichier>` |
+|effacer un fichier (yc dans espace de travail) | `git rm <fichier>` |
+|déclarer une modif sur un fichier | `git commit -m "message"` |
+|rapatrier une branche | `git checkout` |
+|créer une nouvelle branche | `git -b <branche>` |
+|cloner un projet GH | `git clone <url>` |
+|créer une copie de MASTER | `git branch <branche>` |
+|basculer vers BRANCHE | `git checkout <branche>` |
+|basculer une branche vers MASTER | `git checkout master` |
+|afficher les branches d'un dépôt | `git branch -a` |
 
 **Différences**  
-afficher le journal des modif \dotfill `git log`  
-inspecter les modif non indexées \dotfill `git diff`  
-inspecter les modif indexées \dotfill `git diff --staged`  
-inspecter les modif indexées ou non \dotfill `git diff HEAD`  
-inspecter les modif dans une GUI \dotfill `git difftools`  
+|action | commande |
+|-------|----------|
+|afficher le journal des modif | `git log` |
+|inspecter les modif non indexées | `git diff` |
+|inspecter les modif indexées | `git diff --staged` |
+|inspecter les modif indexées ou non | `git diff HEAD` |
+|inspecter les modif dans une GUI | `git difftools` |
 
 **Annuler**  
-reset \dotfill `git reset`  
-revert \dotfill `git revert`  
+|action | commande |
+|-------|----------|
+|reset | `git reset` |
+|revert | `git revert` |
 
 **Remote server**  
-afficher les dépôts distants \dotfill `git remote -v`  
-connecter son dépôt local \dotfill `git remote add origin <url>`  
-pousser les modifs \dotfill `git push -u origin <branche>`  
-mettre à jour le dépôt local \dotfill `git pull`  
-récupérer les données d'un dépôt \dotfill `git fetch <url>`  
-$\hookrightarrow$ ne met pas à jour le dépôt local  
-tagger un `commit` \dotfill `git tag <tag> <commitID>`  
+|action | commande |
+|-------|----------|
+|afficher les dépôts distants | `git remote -v` |
+|connecter son dépôt local | `git remote add origin <url>` |
+|pousser les modifs | `git push -u origin <branche>` |
+|mettre à jour le dépôt local | `git pull` |
+|récupérer les données d'un dépôt | `git fetch <url>` |
+|$\hookrightarrow$ ne met pas à jour le dépôt local |
+|tagger un `commit` | `git tag <tag> <commitID>` |
 
 **A savoir**  
 La commande `checkout` dans `Git` est différente de celle de `Subversion`.  
@@ -119,4 +125,3 @@ Cette restriction est levée par la cmde `git commit -a -m "MESSAGE"`
 [http://gitref.org/](http://gitref.org/)  
 [https://try.github.com/levels/1/challenges/1](https://try.github.com/levels/1/challenges/1)  
 
-\End{multicols}
