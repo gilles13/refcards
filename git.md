@@ -105,8 +105,7 @@ la zone d'index ou zone de préparation (`staging area, stage`) stocke les info 
 |connecter son dépôt local | `git remote add origin <url>` |
 |pousser les modifs | `git push -u origin <branche>` |
 |mettre à jour le dépôt local | `git pull` |
-|récupérer les données d'un dépôt | `git fetch <url>` |
-|$\hookrightarrow$ ne met pas à jour le dépôt local |
+|récupérer les données d'un dépôt | `git fetch <url>` **ne met pas à jour le dépôt local** |
 |tagger un `commit` | `git tag <tag> <commitID>` |
 
 **A savoir**  
