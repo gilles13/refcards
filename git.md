@@ -1,7 +1,3 @@
----
-title: git
-author: gilles
----
 
 **Présentation**  
 `Git` est un gestionnaire de version (`version control system (VCS)`).
@@ -34,9 +30,9 @@ C'est un système qui enregistre l'évolution d'un (ensemble de) fichier(s) au c
 *Les états*  
 Les fichiers peuvent être dans 2 *états* : suivis ou non.
 Lorsqu'ils sont suivis, ils peuvent être :  
-  + modifiés \dotfill dans la zone de travail  
-  + indexés (dans zone d'index) \dotfill avec `git add`  
-  + validés \dotfill avec `git commit`  
+  + modifiés :  dans la zone de travail  
+  + indexés (dans zone d'index) : avec `git add`  
+  + validés : avec `git commit`  
 
 *Les 3 zones*  
 le répertoire `Git` (`repository`) contient les méta-données et la BdD des objets du projet.
@@ -46,30 +42,29 @@ Elle s'initialise avec `git init`. On parle du `dépôt local`.
 
 la zone d'index ou zone de préparation (`staging area, stage`) stocke les info concernant le prochain instantané.
 
-\vfill
-\columnbreak
-
 ![](./images/les3etats.png)
-![](./images/null.png){ width=1% }
 
 **Concepts**  
-master \dotfill branche de développement par défaut  
-origin \dotfill dépôt amont par défaut  
-HEAD \dotfill branche courante, version committé en cours  
-HEAD\textasciicircum \dotfill le commit précédent HEAD  
-$\hookrightarrow$ équivalent à HEAD\textasciitilde  
+| concepts | explications |
+|----------|--------------|
+|master | branche de développement par défaut |
+|origin | dépôt amont par défaut |
+|HEAD | branche courante, version committé en cours |
+|HEAD\textasciicircum | le commit précédent HEAD (équivalent à HEAD\textasciitilde) |
 
 **Configuration**  
-nom \dotfill `git config --global user.name "user name"`  
-email \dotfill `git config --global user.email "my@email"`  
-editeur \dotfill `git config --global core.editor vim`  
-GH user \dotfill `git config --global github.user <user>`  
-GH token \dotfill `git config --global github.token <token>`  
-couleurs différences \dotfill `git config --global color.diff auto`  
-couleurs status \dotfill `git config --global color.status auto`  
-couleurs branches \dotfill `git config --global color.branch auto`  
-voir les réglages \dotfill `git config --list`  
-aide sur la config \dotfill `git help config`  
+| item à configurer | commande |
+|-------------------|----------|
+|nom | `git config --global user.name "user name"` |
+|email | `git config --global user.email "my@email"` |
+|editeur | `git config --global core.editor vim` |
+|GH user | `git config --global github.user <user>` |
+|GH token | `git config --global github.token <token>` |
+|couleurs différences | `git config --global color.diff auto` |
+|couleurs status | `git config --global color.status auto` |
+|couleurs branches | `git config --global color.branch auto` |
+|voir les réglages | `git config --list` |
+|aide sur la config | `git help config` |
 
 **Commandes de base**  
 initialiser un dépôt git \dotfill `git init`  
