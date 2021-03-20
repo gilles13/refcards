@@ -1,58 +1,32 @@
 ---
-papersize: a4
-documentclass: article
-classoption: landscape
-geometry: margin=.5cm
-output:
-  pdf_document:
-    latex_engine: xelatex
-header-includes:
-    - \usepackage{multicol}
-    - \usepackage[yyyymmdd]{datetime}
-    - \newcommand{\hideFromPandoc}[1]{#1}
-    - \hideFromPandoc{
-        \let\Begin\begin
-        \let\End\end
-      }
+title: git
+author: gilles
 ---
-
-\pagenumbering{gobble}
-
-\Begin{multicols}{3}
-
-![](./images/Git-Logo-2Color.png){ width=20% }
-![](./images/null.png){ width=5% }
-
-\scriptsize
-
-![byncsa](./images/cc-by-nc-sa_icon_120_42.png){ width=4% }  [Gilles FIDANI](gilles.fidani@protonmail.com)  
-Update : \today
-
-\footnotesize
 
 **Présentation**  
 `Git` est un gestionnaire de version (`version control system (VCS)`).
 C'est un système qui enregistre l'évolution d'un (ensemble de) fichier(s) au cours du temps, de manière à ce qu'on puisse rappeler une version antérieure à tout moment.
 
 **Vocabulaire**  
-directory \dotfill répertoire  
-$\hookrightarrow$ où `Git` a été initialisé pour commencer le versioning  
-repository \dotfill dépôt  
-remote \dotfill distant (hébergé)  
-to commit \dotfill consigner  
-fork \dotfill embranchement  
-to fetch \dotfill aller chercher, rapporter  
-to check in \dotfill déposer, mettre en dépôt, faire un dépôt  
-check out \dotfill retrait  
-to check out \dotfill récupérer, retirer, rapatrier  
-stage area \dotfill zone d'attente  
-stash \dotfill remise  
-to stash \dotfill remiser  
-to stage \dotfill mettre en attente  
-hash \dotfill empreinte, signature  
-snapshot \dotfill instantané  
-gist \dotfill pastebin service operated by `GitHub`  
-Git LFS \dotfill Large File Storage (pointeurs vers fichiers)  
+|		 anglais 		|		 français		 |		observations		|
+|---------------|----------------|--------------------|
+|directory 			| répertoire			| où `Git` a été initialisé pour commencer le versioning |
+|repository 		| dépôt 					|| 
+|remote | distant (hébergé)  ||
+|to commit | consigner  ||
+|fork | embranchement  ||
+|to fetch | aller chercher, rapporter  ||
+|to check in | déposer, mettre en dépôt, faire un dépôt  ||
+|check out | retrait  ||
+|to check out | récupérer, retirer, rapatrier  ||
+|stage area | zone d'attente  ||
+|stash | remise  ||
+|to stash | remiser  ||
+|to stage | mettre en attente  ||
+|hash | empreinte, signature  ||
+|snapshot | instantané  ||
+|gist | pastebin service operated by `GitHub`  ||
+|Git LFS | Large File Storage (pointeurs vers fichiers)  ||
 
 **Principes**  
 `Git` gère les données comme des **instantanés** d'un mini système de fichier. A chaque `commit`, il réalise un instantané du contenu de l'espace de travail, et enregistre une référence à cet instantané. Si les fichiers n'ont pas changé, `Git` ne les stocke pas à nouveau, il pose juste une référence vers le fichier original qu'il a déja enregistré.
